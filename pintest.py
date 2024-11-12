@@ -1,11 +1,11 @@
 import RPi.GPIO as GPIO
 import time
-000000000000000000000000000000000000000000000000000000000000000000000000000000000
+
 # GPIO-Modus auf BCM setzen
 GPIO.setmode(GPIO.BCM)
 
 # Liste von Pins, die du testen möchtest (z. B. GPIO 17, 27, 22, 5)
-test_pins = [3,5,7,11,13,15,16,18,22,270,,31,36,37]
+test_pins = [3,5,7,11,13,15,16,18,22,27,31,36,37]
 
 # Pins als Ausgang festlegen und testen
 for pin in test_pins:
