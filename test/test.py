@@ -1,5 +1,9 @@
 import RPi.GPIO as GPIO
 import time
+import math
+
+x = 2* math.pi
+
 
 # GPIO-Modus auf BCM setzen
 GPIO.setmode(GPIO.BCM)
