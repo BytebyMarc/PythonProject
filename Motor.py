@@ -1,7 +1,16 @@
 class Motor():
 
     def straightAhead(self):
-       print("motor geradeaus")
+       test = 1
 
     def returns(self):
-       print("motor Rückwährts")
+       test = 2
+
+    def left(self):
+        test = 2
+
+    def right(self):
+        test = 2
+
+    def stop(self):
+        test = 2
