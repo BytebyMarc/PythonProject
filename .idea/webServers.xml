@@ -5,7 +5,7 @@
       <webServer id="00ace630-4a85-4dee-9592-76fd90c5e8f1" name="thecar.local">
         <fileTransfer rootFolder="/home/car" accessType="SFTP" host="thecar.local" port="22" sshConfigId="e1e85310-6bd4-41a5-bd70-157d55a7eba3" sshConfig="car@thecar.local:22 password">
           <advancedOptions>
-            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+            <advancedOptions dataProtectionLevel="Private" keepAliveTimeout="0" passiveMode="true" shareSSLContext="true" />
           </advancedOptions>
         </fileTransfer>
       </webServer>

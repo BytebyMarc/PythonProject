@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="SshConfigs">
+    <configs>
+      <sshConfig authType="PASSWORD" host="thecar.local" id="e1e85310-6bd4-41a5-bd70-157d55a7eba3" port="22" nameFormat="DESCRIPTIVE" username="car" useOpenSSHConfig="true" />
+    </configs>
+  </component>
+</project>
