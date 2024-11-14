@@ -2,14 +2,11 @@ import RPi.GPIO as GPIO
 import time
 import math
 
-x = 2* math.pi
-
-
 # GPIO-Modus auf BCM setzen
 GPIO.setmode(GPIO.BCM)
 
 # Sensor-Pin definieren
-SENSOR_PIN = 36
+SENSOR_PIN = 17
 
 # Sensor-Pin als Eingang festlegen
 GPIO.setup(SENSOR_PIN, GPIO.IN)
