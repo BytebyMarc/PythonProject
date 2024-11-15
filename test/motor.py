@@ -1,40 +1,29 @@
 import RPi.GPIO as GPIO
 from time import sleep
 
-in1 = 24
-in2 = 23
-en = 25
-temp1 = 1
 GPIO.cleanup()
 GPIO.setmode(GPIO.BCM)
-GPIO.setup(in1, GPIO.OUT)
-GPIO.setup(in2, GPIO.OUT)
-GPIO.setup(en, GPIO.OUT)
-GPIO.output(in1, GPIO.LOW)
-GPIO.output(in2, GPIO.LOW)
-p = GPIO.PWM(en, 1000)
-p.start(25)
+GPIO.setup(22, GPIO.OUT)  # MotorDriver 1
+GPIO.setup(27, GPIO.OUT)  # MotorDriver 1
+
+pwm = GPIO.PWM(27, 1000)  # 1000 Hz
+pwm1 = GPIO.PWM(22, 1000) # 1000 Hz
+pwm.start(0)
+pwm1.start(0)
 print("\n")
-print("The default speed & direction of motor is LOW & Forward.....")
-print("r-run s-stop f-forward b-backward l-low m-medium h-high e-exit")
+print("Motor test")
 print("\n")
+i = 1
+# vorwährts
+GPIO.output(27, GPIO.LOW)
+GPIO.output(22, GPIO.LOW)
 
-while (1):
+while i < 30:
 
-    x = input()
+    pwm.ChangeDutyCycle(25)
+    sleep(0.1)
+    i += 1
 
-    if x == 'r':
-        print("run")
-        if (temp1 == 1):
-            GPIO.output(in2, GPIO.LOW)
-            sleep(2)
-
-            while True:
-                GPIO.output(in1, GPIO.HIGH)
-                sleep(1)
-                GPIO.output(in1, GPIO.LOW)
-                sleep(1)
-
-
-            print("forward")
-            x = 'z'
+GPIO.output(27, GPIO.LOW)
+print("forward")
+x = 'z'

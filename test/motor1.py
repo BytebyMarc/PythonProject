@@ -18,6 +18,7 @@ GPIO.setup(in4, GPIO.OUT)
 # Software-PWM auf IN1
 pwm = GPIO.PWM(in1, 1000)  # 1000 Hz
 pwm1 = GPIO.PWM(in3, 1000)  # 1000 Hz
+
 pwm.start(0)
 pwm1.start(0)
 try:
@@ -28,7 +29,7 @@ try:
         # Geschwindigkeit erhöhen
         pwm.ChangeDutyCycle(50)
         pwm1.ChangeDutyCycle(50)
-        sleep(2)
+        sleep(0.1)
 
         # Volle Geschwindigkeit für 2 Sekunden
         sleep(0.1)
@@ -37,7 +38,7 @@ try:
         for speed in range(100, -1, -5):  # Verringere die Geschwindigkeit in 5%-Schritten
             pwm.ChangeDutyCycle(speed)
             pwm1.ChangeDutyCycle(speed)
-            sleep(0.5)
+            sleep(0.1)
 
         # Motor stoppen
         pwm.ChangeDutyCycle(0)
